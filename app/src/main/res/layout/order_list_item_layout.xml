@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/item_grey_border_background"
+    android:foreground="?android:selectableItemBackground"
+    android:orientation="vertical"
+    android:padding="@dimen/item_list_padding">
+
+    <LinearLayout
+        android:id="@+id/llItemImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rv_item_image_background"
+        android:padding="@dimen/item_image_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivItemImage"
+            android:layout_width="@dimen/item_image_width"
+            android:layout_height="@dimen/item_image_height"
+            android:contentDescription="@string/content_description"
+            android:scaleType="fitXY" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/item_image_title_price_marginStart"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/llItemImage"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.example.shopappfirebase.utils.MSATextViewRegular
+            android:id="@+id/tvItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/item_value_text_color"
+            android:textSize="@dimen/rv_item_name_textSize"
+            tools:text="Name" />
+
+        <com.example.shopappfirebase.utils.MSATextViewBold
+            android:id="@+id/tvTotalPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/rv_item_price_marginTop"
+            android:textColor="@color/item_value_text_color"
+            android:textSize="@dimen/rv_item_price_textSize"
+            tools:text="100.00€" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

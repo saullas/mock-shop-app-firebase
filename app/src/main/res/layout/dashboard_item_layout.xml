@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/item_dashboard_margin"
+    android:background="@drawable/item_grey_border_background"
+    android:foreground="?android:selectableItemBackground"
+    android:gravity=""
+    android:orientation="vertical"
+    android:padding="@dimen/item_dashboard_padding">
+
+    <ImageView
+        android:id="@+id/ivItemImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_dashboard_image_height"
+        android:layout_marginStart="@dimen/item_dashboard_image_margin"
+        android:layout_marginTop="@dimen/item_dashboard_image_margin"
+        android:layout_marginEnd="@dimen/item_dashboard_image_margin"
+        android:layout_marginBottom="@dimen/item_dashboard_image_margin"
+        android:background="@color/colorImageViewBg"
+        android:contentDescription="@string/content_description"
+        android:src="@drawable/img_splash_background" />
+
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:layout_below="@id/ivItemImage"
+        android:background="@color/colorBorder" />
+
+    <LinearLayout
+        android:id="@+id/llItemDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewDivider"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/dashboard_item_paddingHor"
+        android:paddingVertical="@dimen/dashboard_item_paddingVer">
+
+        <com.example.shopappfirebase.utils.MSATextViewRegular
+            android:id="@+id/tvItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/item_value_text_color"
+            android:textSize="@dimen/dashboard_item_textSize"
+            tools:text="Item name" />
+
+        <com.example.shopappfirebase.utils.MSATextViewBold
+            android:id="@+id/tvItemPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dashboard_item_price_marginTop"
+            android:textColor="@color/item_value_text_color"
+            android:textSize="@dimen/dashboard_item_textSize"
+            tools:text="100.00€" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <stroke android:width="@dimen/gender_radio_button_stroke_width"
+        android:color="@color/colorSecondaryText"/>
+    <corners android:radius="@dimen/gender_radio_button_radius"/>
+</shape>
