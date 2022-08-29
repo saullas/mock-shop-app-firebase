@@ -21,14 +21,6 @@
             android:scaleType="fitXY"
             android:src="@drawable/auth_screens_background" />
 
-        <ImageView
-            android:layout_width="@dimen/auth_logo_width"
-            android:layout_height="@dimen/auth_logo_height"
-            android:layout_gravity="center"
-            android:contentDescription="@string/content_description"
-            android:scaleType="fitCenter"
-            android:src="@drawable/tutorials_eu_logo"
-            app:tint="@color/white" />
     </FrameLayout>
 
     <com.example.shopappfirebase.utils.MSATextViewBold
